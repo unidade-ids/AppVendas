@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AppVendas.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class ProductController : Controller
     {
         private readonly IRepositoryProduct _repository;
