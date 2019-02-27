@@ -45,6 +45,7 @@ namespace AppVendas.Infra.Repositories
 
         public void Update(Product product)
         {
+            //_context.Update(product);
             _context.Entry(product).State = EntityState.Modified;
         }
     }

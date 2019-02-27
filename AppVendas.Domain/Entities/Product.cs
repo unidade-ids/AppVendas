@@ -4,18 +4,18 @@ namespace AppVendas.Domain.Entities
 {
     public class Product
     {
-        public int Id { get; private set; }
-        public string Name { get; private set; }
-        public string Description { get; private set; }
-        public decimal Price { get; private set; }
-        public DateTime? Update { get; private set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
+        public DateTime? Update { get; set; }
 
-        public Product(string name, string description, decimal price, DateTime? update)
+        public Product(string name, string description, decimal price)
         {
             this.Name = name;
             this.Description = description;
             this.Price = price;
-            this.Update = update;
+            this.Update = DateTime.Now;
         }
     }
 }

@@ -9,7 +9,7 @@ const options = {
   headers: new HttpHeaders({'Content-Type': 'application/json'})
 };
 
-const _url: string = "/api/v1/product";
+const _url: string = "http://localhost:51499/api/v1/product";
 
 @Injectable({
   providedIn: 'root'

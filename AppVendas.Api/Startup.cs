@@ -29,6 +29,8 @@ namespace AppVendas.Api
 
             services.AddTransient<IRepositoryProduct, RepositoryProduct>();
 
+            services.AddCors();
+
             services.AddMvc()
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -40,6 +42,13 @@ namespace AppVendas.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(c =>
+            {
+                c.AllowAnyHeader();
+                c.AllowAnyMethod();
+                c.AllowAnyOrigin();
+            });
 
             app.UseMvcWithDefaultRoute();
         }
